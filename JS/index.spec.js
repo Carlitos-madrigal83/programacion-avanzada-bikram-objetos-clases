@@ -458,7 +458,7 @@ describe(`Nivel premium`, () => {
         })
     });
 
-    describe(`23.- Crea la clase Lavavajillas con las propiedades: carga (objeto {platos: numPlatos, vasos: numVasos}), el setter cargar {acepatará como argumento un objeto {platos: numPlatos, vasos: numVasos} y actualizará carga, para llamarlo se podrá utilizar el operador de propagación, si una variable queda sin definir, su valor no deberá cambiar}`, () => {
+    describe(`23.- Crea la clase Lavavajillas con las propiedades: carga (objeto {platos: numPlatos, vasos: numVasos}), el setter nuevaCarga {acepatará como argumento un objeto {platos: numPlatos, vasos: numVasos} y actualizará carga, para llamarlo se podrá utilizar el operador de propagación, si una variable queda sin definir, su valor no deberá cambiar}`, () => {
         let prop1 = {platos: Math.floor(Math.random() * 15), vasos: Math.floor(Math.random() * 15)};
         let a = new Lavavajillas(prop1);
 
@@ -468,19 +468,19 @@ describe(`Nivel premium`, () => {
         it("Contiene la propiedad carga", () => {
             expect(a.carga).toBe(prop1);
         });
-        it("Contiene el setter cargar cambiamos ambas", () => {
+        it("Contiene el setter nuevaCarga cambiamos ambas", () => {
             let pre = a.carga;
             let nuevaCarga = {...a.carga, platos: Math.floor(Math.random() * 15)};
             a.nuevaCarga = nuevaCarga;
             expect(a.carga).toEqual(nuevaCarga);
         });
-        it("Contiene el setter cargar cambiamos solo vasos", () => {
+        it("Contiene el setter nuevaCarga cambiamos solo vasos", () => {
             let pre = a.carga;
             let nuevaCarga = {vasos: Math.floor(Math.random() * 15)};
             a.nuevaCarga = nuevaCarga;
             expect(a.carga).toEqual({platos: a.carga.platos, vasos: nuevaCarga.vasos});
         });
-        it("Contiene el setter cargar cambiamos solo platos", () => {
+        it("Contiene el setter nuevaCarga cambiamos solo platos", () => {
             let pre = a.carga;
             let nuevaCarga = { platos: Math.floor(Math.random() * 15) };
             a.nuevaCarga = nuevaCarga;
