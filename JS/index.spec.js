@@ -347,7 +347,7 @@ describe("Nivel intermedio", () => {
         });
     });
 
-    describe(`18.- Crea la clase Error_ con las propiedades: codigo, descripcion, nombre y el método: imprimirError {se imprime a si mismo (this) por pantalla}`, () => {
+    describe(`18.- Crea la clase Error_ con las propiedades: codigo, descripcion, nombre y el método: imprimirError {se imprime a si mismo (this) por consola}`, () => {
         let prop1 = Math.floor(Math.random() * 600);
         let prop2 = randomString();
         let prop3 = randomString();
