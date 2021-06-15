@@ -61,3 +61,35 @@ const Perro = [
         return ("Ha hecho " + Math.random() * 3 + " caquitas")
     }
 ]
+
+const Perrito = {
+    nombre: "",
+    raza: "",
+    popo: () => "Ha hecho " + Math.random() * 3 + " caquitas",
+}
+
+class Perrazo {
+    constructor(nombre, raza) {
+        this.nombre = nombre;
+        this.raza = raza;
+    }
+    popo() {
+        return "Ha hecho " + Math.random() * 3 + " caquitas";
+    }
+}
+
+const lebrelazo = new Perrazo("Gus", "Lebrel");
+
+class Husky extends Perrazo {
+    constructor(nombre, heterocromia) {
+        super(nombre, "Husky");
+        this.heterocromia = heterocromia;
+    }
+    tieneHeterocromia() {
+        if (this.heterocromia) {
+            console.log("si");
+        } else {
+            console.log("no");
+        }
+    }
+}
